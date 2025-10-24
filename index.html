@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IntoTheWoods - Nature Meets Luxury</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo">IntoTheWoods</div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Plants</a>
+      <a href="#">Terrariums</a>
+      <a href="#">Decor</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="seller.html">Become a Seller</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <div class="hero-bg-image"></div>
+      <h1>Bring Nature Home</h1>
+      <p>Explore elegant, eco-luxury creations — where art meets earth.</p>
+      <button class="btn">Shop Now</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Most Popular</h2>
+    <div class="product-container" id="popular"></div>
+  </section>
+
+  <section class="products">
+    <h2>For Beginners</h2>
+    <div class="product-container" id="beginners"></div>
+  </section>
+
+  <section class="products">
+    <h2>Shop by Size</h2>
+    <div class="product-container" id="size"></div>
+  </section>
+  <section class="products">
+  <h2>Gifting</h2>
+  <div class="banner-container">
+    <a href="gifting.html">
+      <img src="images/gift.jpg" alt="Gifting" class="banner-img" />
+    </a>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Shop Sets</h2>
+  <div class="banner-container">
+    <a href="shop-sets.html">
+      <img src="images/shop.jpg" alt="Shop Sets" class="banner-img" />
+    </a>
+  </div>
+</section>
+<section class="us-vs-regrets-table">
+  <!-- Logo / Branding -->
+<section class="us-vs-regrets-table">
+  <!-- Logo / Branding -->
+  <div class="logo-container">
+    <img src="images/logo.png" alt="Brand Logo" class="brand-logo">
+  </div>
+
+  <h2>Why Choose Us? 💖 vs Regrets 😢</h2>
+
+  <div class="table-container">
+    <div class="table-header">
+      <div class="table-cell header-cell">Us 💖</div>
+      <div class="table-cell header-cell">Regrets 😢</div>
+    </div>
+
+    <div class="table-row">
+      <div class="table-cell">✅ High-quality service ✨</div>
+      <div class="table-cell">❌ Poor service 😢</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Personalized experiences 🎁</div>
+      <div class="table-cell">❌ Impersonal & generic 💔</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Reliable & trustworthy 🌟</div>
+      <div class="table-cell">❌ Wasting time & money ⚡</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Memorable moments 💌</div>
+      <div class="table-cell">❌ Regret not choosing wisely ⏳</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Friendly & supportive team 🤝</div>
+      <div class="table-cell">❌ Lack of guidance or support 😞</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Transparent & honest communication 📝</div>
+      <div class="table-cell">❌ Hidden issues or unclear info 🕳️</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Continuous improvement & innovation 💡</div>
+      <div class="table-cell">❌ Stagnation or outdated methods 🛑</div>
+    </div>
+    <div class="table-row">
+      <div class="table-cell">✅ Customer satisfaction guaranteed 🌈</div>
+      <div class="table-cell">❌ Unfulfilled expectations 😔</div>
+    </div>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+  <!-- Floating Discount Popup -->
+<div id="discount-popup" class="discount-popup">
+  <div class="popup-box">
+    <button class="popup-close" id="popupClose">&times;</button>
+    <div class="popup-icon">🎁</div>
+    <h3>Get 10% Off!</h3>
+    <p>Register now and receive an extra 10% off your first order.</p>
+
+    <form id="discountForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <button type="submit" class="popup-btn">Claim My Discount</button>
+    </form>
+  </div>
+</div>
+
+<script src="popup.js"></script>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-column footer-signup">
+            <h3>Sign Up — 10% off your first order</h3>
+            <form class="signup-form" id="signup-form">
+                <input type="email" id="email-input" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3>Get Help</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">For Businesses</a></li>
+                <li><a href="#">Designer Program</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Our Terms</h3>
+            <ul>
+                <li><a href="#">Refund Policy</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column footer-contact">
+            <h3 class="footer-logo">itw.</h3>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>WhatsApp: <a href="httpsa://wa.me/15551234567">+1 (555) 123-4567</a></p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Into The Woods. All rights reserved.</p>
+    </div>
+
+    <div class="floating-buttons">
+        <a href="tel:+15551234567" class="float-btn float-call" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <a href="#" class="float-btn float-chat" aria-label="Chat with us">
+            <i class="fa-solid fa-comment-dots"></i>
+        </a>
+    </div>
+</footer>
+
+  <footer>
+    <p>© 2025 IntoTheWoods | Crafted with 🌿 Elegance</p>
+  </footer>
+
+</body>
+</html>

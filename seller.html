@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Seller</title>
+    <link rel="stylesheet" href="seller-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="seller-container">
+        <div class="header-section">
+            <h1 class="main-title">Become a Seller</h1>
+            <p class="subtitle">Join our marketplace in 4 easy steps.</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-step-label" id="step-label">Personal Details</div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div class="step-counter" id="step-counter">Step 1 of 4</div>
+        </div>
+
+        <form id="seller-form" class="seller-form">
+            <div class="form-step active" data-step="1">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="emailID">Email ID</label>
+                        <input type="email" id="emailID" name="emailID" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group otp-group half-width">
+                        <label for="emailOTP">Email OTP</label>
+                        <input type="text" id="emailOTP" name="emailOTP" placeholder="123456" pattern="\d{6}" maxlength="6" required>
+                        <button type="button" class="verify-btn">Verify</button>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group mobile-group half-width">
+                        <label for="mobileNumber">Mobile Number</label>
+                        <div class="mobile-input-group">
+                            <span class="country-code">+971</span>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" placeholder="501234567" pattern="[0-9]{8,10}" required>
+                        </div>
+                    </div>
+                    <div class="form-group otp-group half-width">
+                        <label for="mobileOTP">Mobile OTP</label>
+                        <input type="text" id="mobileOTP" name="mobileOTP" placeholder="123456" pattern="\d{6}" maxlength="6" required>
+                        <button type="button" class="verify-btn">Verify</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emirate">Emirate</label>
+                    <div class="select-wrapper">
+                        <select id="emirate" name="emirate" required>
+                            <option value="">Select your Emirate</option>
+                            <option value="dubai">Dubai</option>
+                            <option value="abudhabi">Abu Dhabi</option>
+                            <option value="sharjah">Sharjah</option>
+                            <option value="ajman">Ajman</option>
+                            <option value="fujairah">Fujairah</option>
+                            <option value="rak">Ras Al Khaimah</option>
+                            <option value="ummalquwain">Umm Al Quwain</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="emiratesIDNumber">Emirates ID Number</label>
+                    <div class="emirates-id-group">
+                        <input type="text" id="emiratesIDNumber" name="emiratesIDNumber" placeholder="784-XXXX-XXXXXXX-X" pattern="[0-9]{3}-[0-9]{4}-[0-9]{7}-[0-9]{1}" required>
+                        <button type="button" class="uae-pass-btn"><i class="fas fa-lock"></i> Connect with UAE PASS</button>
+                    </div>
+                </div>
+                
+                <div class="form-group file-upload-group">
+                    <label for="uploadEmiratesID">Upload Emirates ID</label>
+                    <input type="file" id="uploadEmiratesID" name="uploadEmiratesID" accept="image/*,.pdf" required>
+                    <label for="uploadEmiratesID" class="custom-file-upload">Choose File <span class="file-name">No file chosen</span></label>
+                    <p class="help-text">Please upload a clear copy of the front and back.</p>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="next-btn primary-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <div class="form-group">
+                    <label for="accountEmailID">Email ID</label>
+                    <input type="email" id="accountEmailID" name="accountEmailID" value="mirebac394@ekposta.com" readonly>
+                    <p class="help-text">Your password will be linked to this email address.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="createPassword">Create Password</label>
+                    <input type="password" id="createPassword" name="createPassword" required minlength="8">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8">
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-btn secondary-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="next-btn primary-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <div class="form-group file-upload-group">
+                    <label for="tradeLicense">Trade License</label>
+                    <input type="file" id="tradeLicense" name="tradeLicense" accept="image/*,.pdf" required>
+                    <label for="tradeLicense" class="custom-file-upload">Choose File <span class="file-name">No file chosen</span></label>
+                    <p class="help-text">Upload a valid copy of your trade license.</p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half-width">
+                        <label for="bankAccountHolderName">Bank Account Holder Name</label>
+                        <input type="text" id="bankAccountHolderName" name="bankAccountHolderName" placeholder="Account Holder Name" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="iban">IBAN</label>
+                        <input type="text" id="iban" name="iban" placeholder="AEXXXXXXXXXXXXXXXXXXXXX" pattern="AE[0-9]{23}" maxlength="25" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="vatNumber">VAT Number (Optional)</label>
+                    <input type="text" id="vatNumber" name="vatNumber" placeholder="TRN Number">
+                </div>
+
+                <div class="form-group">
+                    <label for="fullAddress">Full Address</label>
+                    <textarea id="fullAddress" name="fullAddress" rows="3" placeholder="Your complete business address" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickupDetails">Pickup Details</label>
+                    <textarea id="pickupDetails" name="pickupDetails" rows="3" placeholder="e.g., Store address, warehouse location, contact person" required></textarea>
+                    <p class="help-text">Provide information for order pickups.</p>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-btn secondary-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="button" class="next-btn primary-btn">Next <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="4">
+                <div class="product-list-section">
+                    <h2 class="section-title-danger">Your Products</h2>
+                    <p class="error-message" id="product-error-message">Please add at least one product.</p>
+                    
+                    <div id="product-items-container">
+                        </div>
+
+                    <button type="button" class="add-product-btn primary-btn"><i class="fas fa-plus-circle"></i> Add Another Product</button>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="prev-btn secondary-btn"><i class="fas fa-arrow-left"></i> Previous</button>
+                    <button type="submit" class="submit-btn primary-btn">Submit Application</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="seller-script.js"></script>
+</body>
+</html>

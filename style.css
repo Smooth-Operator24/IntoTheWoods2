@@ -1,0 +1,654 @@
+:root {
+  --emerald: #064e3b;
+  --dark-emerald: #022c22;
+  --gold: #d4af37;
+  --text-light: #f3f4f6;
+  --bg-dark: #0d1b12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--emerald);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+  margin-right: 20px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-bar input {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  width: 320px;
+  background: var(--dark-emerald);
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 80px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(6, 30, 19, 0.7);
+}
+
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: var(--text-light);
+  z-index: 2;
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: url('images/hero-bg-text.jpg') center/cover no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: var(--gold);
+  color: #000;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #e6c45c;
+}
+
+/* PRODUCTS */
+.products {
+  padding: 70px 60px;
+}
+
+.products h2 {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 30px;
+  border-left: 4px solid var(--gold);
+  padding-left: 10px;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: var(--emerald);
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin: 12px 0 5px;
+  font-size: 1.1rem;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* BANNER CARD */
+.banner-card {
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.banner-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.banner-card:hover img {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--dark-emerald);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* SMALL POPUP */
+.discount-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+.popup-box {
+  background-color: #264b33;
+  color: #eaeaea;
+  padding: 1.8rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.popup-icon {
+  font-size: 2rem;
+  background-color: #50c878;
+  color: #0e1f16;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-box h3 {
+  margin: 0.5rem 0;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.popup-box p {
+  font-size: 0.9rem;
+  color: #c8c8c8;
+  margin-bottom: 1rem;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #3a5a45;
+  background-color: #1c3523;
+  color: #fff;
+}
+
+.popup-box input::placeholder {
+  color: #a6a6a6;
+}
+
+.popup-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #50c878;
+  color: #0e1f16;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.popup-btn:hover {
+  background-color: #6ee7b7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 1024px) {
+  header {
+    padding: 18px 40px;
+  }
+
+  .search-bar input {
+    width: 250px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .product-card img,
+  .banner-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px 20px;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .product-card img,
+  .banner-card img {
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+.us-vs-regrets-table {
+  padding: 60px;
+  background: rgba(6,30,19,0.5);
+  border-radius: 20px;
+  margin: 50px 60px;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.us-vs-regrets-table .logo-container {
+  margin-bottom: 20px;
+}
+
+.brand-logo {
+  height: 80px;
+  width: auto;
+}
+
+.us-vs-regrets-table h2 {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--gold);
+  padding-left: 12px;
+  display: inline-block;
+}
+
+.table-container {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: table-row;
+  background: var(--emerald);
+}
+
+.table-row {
+  display: table-row;
+  background: rgba(2,44,34,0.7);
+}
+
+.table-cell {
+  display: table-cell;
+  padding: 20px;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+}
+
+.table-cell:last-child {
+  border-right: none;
+}
+
+.header-cell {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--gold);
+}
+
+.table-row:nth-child(even) {
+  background: rgba(2,44,34,0.6);
+}
+
+.table-cell {
+  transition: transform 0.3s, background 0.3s;
+}
+
+.table-row:hover .table-cell {
+  transform: scale(1.03);
+  background: rgba(4, 70, 50, 0.8);
+}
+/* --- Main Footer Styles --- */
+.site-footer {
+    background-color: #022c22; /* Dark Emerald (Background) */
+    color: #f3f4f6;           /* Text Light (Primary Text) */
+    padding: 4rem 2rem 2rem;
+    position: relative; 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Example font */
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    /* Responsive grid: 4 columns on large screens, stacks on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #064e3b; /* Emerald (Main Accent) */
+}
+
+.footer-column h3 {
+    color: #d4af37; /* Gold (Titles) */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- Column 1: Sign Up --- */
+.footer-signup h3 {
+    text-transform: none; /* As per image */
+    font-size: 1.2rem;
+}
+
+.signup-form {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    overflow: hidden; /* Ensures the border-radius clips children */
+}
+
+.signup-form input[type="email"] {
+    flex-grow: 1;
+    padding: 0.75rem;
+    border: 1px solid #064e3b; /* Emerald (Main Accent) */
+    background-color: #022c22; /* Dark Emerald (Background) */
+    color: #f3f4f6;           /* Text Light */
+    font-size: 1rem;
+    min-width: 150px;
+}
+
+.signup-form input[type="email"]::placeholder {
+    color: #f3f4f6;
+    opacity: 0.7;
+}
+
+.signup-form button {
+    padding: 0.75rem 1.25rem;
+    background-color: #064e3b; /* Emerald (Main Accent) */
+    color: #f3f4f6;           /* Text Light */
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: rgba(4, 70, 50, 0.8); /* Emerald hover */
+}
+
+.social-icons a {
+    color: #f3f4f6; /* Text Light */
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: rgba(212, 175, 55, 0.7); /* Gold highlight */
+}
+
+/* --- Columns 2 & 3: Lists --- */
+.footer-column ul {
+    list-style: none;
+    padding: 0; /* Ensure no default padding */
+}
+
+.footer-column li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-column a {
+    color: #f3f4f6; /* Text Light */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: rgba(212, 175, 55, 0.7); /* Gold highlight */
+}
+
+/* --- Column 4: Contact --- */
+.footer-contact .footer-logo {
+    color: #d4af37; /* Gold */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: none; /* Override general h3 style */
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- Footer Bottom Bar --- */
+.footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #f3f4f6;
+    opacity: 0.8;
+}
+
+.copyright-logo {
+    background-color: #f3f4f6;
+    color: #022c22;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+/* --- Floating Action Buttons --- */
+.floating-buttons {
+    position: fixed; /* Changed from absolute to fixed */
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    z-index: 1000;
+}
+
+.float-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3f4f6; /* Text Light */
+    font-size: 1.75rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.float-call {
+    background-color: #064e3b; /* Emerald */
+}
+.float-call:hover {
+    background-color: rgba(4, 70, 50, 0.8); /* Emerald hover */
+    transform: translateY(-3px);
+}
+
+.float-chat {
+    background-color: #333; /* A neutral dark for the chat */
+}
+.float-chat:hover {
+    background-color: #444;
+    transform: translateY(-3px);
+}
+
+/* --- Media Query for Smaller Screens --- */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack columns */
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse; /* Stack logo and text */
+        gap: 1rem;
+        text-align: center;
+    }
+}
